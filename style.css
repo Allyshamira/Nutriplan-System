@@ -1,0 +1,159 @@
+/* Additional CSS for centering and layout adjustments */
+
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-image: url(depositphotos_207250452-stock-photo-top-view-food-composition-various.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.row.content {
+  display: flex;
+  align-items: center;
+}
+
+.signin-text {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-control {
+  border-radius: 5px;
+}
+
+.btn-class {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.btn-class:hover {
+  background-color: #0056b3;
+}
+
+.forgot-password {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.forgot-password a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.forgot-password a:hover {
+  text-decoration: underline;
+}
+
+/* Image styling to make it responsive */
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Dashboard sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 100vh;
+  background-color: #343a40;
+  color: white;
+  overflow-y: auto;
+}
+
+/* Ensure the logout button stays at the bottom of the sidebar */
+.sidebar .logout {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  padding: 10px 0;
+  text-align: center;
+  color: #6c757d;
+}
+
+/* Main content area adjustment */
+.main-content {
+  margin-left: 200px; /* Adjust the main content to the right of the sidebar */
+  padding: 20px;
+}
+
+/* Adjust for smaller screens */
+@media (max-width: 700px) {
+  .sidebar {
+      width: 100px;
+  }
+  .main-content {
+      margin-left: 100px;
+  }
+}
+
+/* Footer styling */
+.footer {
+  background-color: #333; /* Dark background for contrast */
+  color: #fff; /* White text for readability */
+  padding: 20px 0;
+  text-align: center;
+  font-size: 14px;
+  margin-top: auto;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer-nav {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.footer-nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer-nav a:hover {
+  text-decoration: underline;
+}
+
+/* Footer responsive design */
+@media (max-width: 768px) {
+  .footer-content {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .footer-nav {
+      margin-top: 10px;
+  }
+}

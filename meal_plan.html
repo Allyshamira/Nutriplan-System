@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NutriPlan System</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+     <!-- Google Font -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+
+     <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+          <!-- Sidebar -->
+          <div class="sidebar">
+            <div class="pt-4 pb-1 px-3">
+              <a href="#" class="text-white text-decoration-none d-flex align-items-center">
+                <i class="fa-solid fa-american-sign-language-interpreting fs-2 me-2"></i>
+                <span class="fs-4 d-none d-sm-inline">NutriPlan System</span>
+              </a>
+            </div>
+            <hr class="text-secondary">
+            <ul class="nav nav-pills flex-column mb-auto px-2">
+              <li class="nav-item">
+                <a href="dashboard.html" class="nav-link text-white">
+                  <i class="fa-solid fa-bars me-2"></i>
+                  <span class="d-none d-sm-inline">Dashboard</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="meal_plan.html" class="nav-link text-white">
+                  <i class="fa-solid fa-utensils me-2"></i>
+                  <span class="d-none d-sm-inline">Meal Plans</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="nutrition_info.html" class="nav-link text-white">
+                  <i class="fa-solid fa-apple-whole me-2"></i>
+                  <span class="d-none d-sm-inline">Nutrition Info</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="progress_tracker.html" class="nav-link text-white">
+                  <i class="fa-solid fa-chart-line me-2"></i>
+                  <span class="d-none d-sm-inline">Progress Tracker</span>
+                </a>
+              </li>
+            </ul>
+            <hr class="text-secondary">
+            <div class="logout">
+              <a href="index.html" class="text-secondary text-decoration-none small">
+                <i class="fa-solid fa-right-from-bracket me-2"></i>Logout
+              </a>
+            </div>
+          </div
+    
+            <!-- Main Content -->
+            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+                <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                    <h1 class="h2">Meal Plans</h1>
+                </div>
+    
+                <!-- Add New Meal Plan Form -->
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <h5 class="card-title">Create a New Meal Plan</h5>
+                    </div>
+                    <div class="card-body">
+                        <form>
+                            <div class="mb-3">
+                                <label for="mealName" class="form-label">Meal Name</label>
+                                <input type="text" class="form-control" id="mealName" placeholder="Enter meal name">
+                            </div>
+                            <div class="mb-3">
+                                <label for="mealType" class="form-label">Meal Type</label>
+                                <select class="form-select" id="mealType">
+                                    <option selected>Choose meal type...</option>
+                                    <option value="1">Breakfast</option>
+                                    <option value="2">Lunch</option>
+                                    <option value="3">Dinner</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="mealDescription" class="form-label">Meal Description</label>
+                                <textarea class="form-control" id="mealDescription" rows="3" placeholder="Enter meal description"></textarea>
+                            </div>
+                            <div class="mb-3">
+                                <label for="mealCalories" class="form-label">Calories</label>
+                                <input type="number" class="form-control" id="mealCalories" placeholder="Enter calories per serving">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Create Meal Plan</button>
+                        </form>
+                    </div>
+                </div>
+    
+                <!-- Meal Plans Display -->
+                <div class="row">
+                    <!-- Meal Plan Card 1 -->
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="chicken-wrap.jpg" class="card-img-top" alt="Meal 1">
+                            <div class="card-body">
+                                <h5 class="card-title">Grilled chicken Wrap</h5>
+                                <p class="card-text">A nutritious and energizing breakfast to start your day.</p>
+                                <p><strong>Calories:</strong> 350</p>
+                                <p><strong>Meal Type:</strong> Breakfast</p>
+                                <a href="#" class="btn btn-primary">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Meal Plan Card 2 -->
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="wvcj-listing.jpg" class="card-img-top" alt="Meal 2">
+                            <div class="card-body">
+                                <h5 class="card-title">Chicken Rice</h5>
+                                <p class="card-text">A light and healthy meal packed with protein.</p>
+                                <p><strong>Calories:</strong> 250</p>
+                                <p><strong>Meal Type:</strong> Lunch</p>
+                                <a href="#" class="btn btn-primary">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <!-- Meal Plan Card 3 -->
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="Simply-Recipes-Spaghetti-Aglio-e-Olio-LEAD-2-c8e7e8c6edb04a8691463c6ea8cd4ba1.jpg" class="card-img-top" alt="Meal 3">
+                            <div class="card-body">
+                                <h5 class="card-title">Spaghetti Aglio Olio</h5>
+                                <p class="card-text">A hearty and flavorful vegetarian dinner option.</p>
+                                <p><strong>Calories:</strong> 400</p>
+                                <p><strong>Meal Type:</strong> Dinner</p>
+                                <a href="#" class="btn btn-primary">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
